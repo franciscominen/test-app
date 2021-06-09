@@ -4,13 +4,13 @@ import Home from './components/Home';
 import ProductsContainer from './components/ProductsContainer';
 import MyListContainer from './components/MyListContainer';
 import Navbar from './components/Navbar';
-import {ListProvider} from './context/AppContext'
+import StoreProvider from './store/StoreProvider';
 
 function App() {
   return (
     <>
       <Router>
-      <ListProvider> 
+      <StoreProvider> 
           <Navbar/>
 
           <Switch>
@@ -22,7 +22,7 @@ function App() {
             <Route exact component={MyListContainer} path="/mi-lista" />
 
           </Switch>
-      </ListProvider> 
+      </StoreProvider> 
       </Router> 
     </>
   );
